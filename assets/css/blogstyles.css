@@ -70,4 +70,12 @@
   align-items: center;
   padding: 1rem;
 }
- 
+
+a {
+  color: #D4AF37;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
