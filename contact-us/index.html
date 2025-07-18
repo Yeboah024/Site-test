@@ -51,24 +51,51 @@
   <!-- Google Maps API -->
 <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_Jdo5yFt-wsmbZl5rAsKdRAYGwmcI8lw&callback=console.debug&libraries=maps,marker&v=beta"></script>
 
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ContactPage",
-        "mainEntity": {
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
           "@type": "Organization",
-          "name": "Great Gold Mining LLC",
+          "@id": "https://www.greatgoldmining.com/#organization",
+          "name": "Great Gold Mining Limited",
           "url": "https://www.greatgoldmining.com",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://www.greatgoldmining.com/#logo",
+            "url": "https://www.greatgoldmining.com/assets/images/logo.png",
+            "width": 112,
+            "height": 112,
+            "caption": "Great Gold Mining Limited Logo"
+          },
+          "image": {
+            "@id": "https://www.greatgoldmining.com/#logo"
+          },
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+233-256-971-266",
-            "contactType": "Customer Service",
+            "telephone": "",
+            "contactType": "customer service",
             "areaServed": "GH",
             "availableLanguage": ["English"]
-          }
+          },
+          "sameAs": [
+            "https://www.facebook.com/greatgoldmining",
+            "https://www.instagram.com/greatgoldmining"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.greatgoldmining.com/#website",
+          "url": "https://www.greatgoldmining.com",
+          "name": "Great Gold Mining Limited",
+          "publisher": {
+            "@id": "https://www.greatgoldmining.com/#organization"
+          },
+          "inLanguage": "en"
         }
-      }
+      ]
+    }
     </script>
   
     <!-- Stylesheets -->

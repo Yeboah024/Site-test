@@ -47,20 +47,48 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Gold Mining and Export",
-      "provider": {
-        "@type": "Organization",
-        "name": "Great Gold Mining LLC",
-        "url": "https://www.greatgoldmining.com"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Worldwide"
-      },
-      "description": "Great Gold Mining LLC provides sustainable gold mining, ethical sourcing, and secure international export services."
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.greatgoldmining.com/#organization",
+          "name": "Great Gold Mining Limited",
+          "url": "https://www.greatgoldmining.com",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://www.greatgoldmining.com/#logo",
+            "url": "https://www.greatgoldmining.com/assets/images/logo.png",
+            "width": 112,
+            "height": 112,
+            "caption": "Great Gold Mining Limited Logo"
+          },
+          "image": {
+            "@id": "https://www.greatgoldmining.com/#logo"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "",
+            "contactType": "customer service",
+            "areaServed": "GH",
+            "availableLanguage": ["English"]
+          },
+          "sameAs": [
+            "https://www.facebook.com/greatgoldmining",
+            "https://www.instagram.com/greatgoldmining"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.greatgoldmining.com/#website",
+          "url": "https://www.greatgoldmining.com",
+          "name": "Great Gold Mining Limited",
+          "publisher": {
+            "@id": "https://www.greatgoldmining.com/#organization"
+          },
+          "inLanguage": "en"
+        }
+      ]
     }
-  </script>
+    </script>
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="/assets/css/servicesstyle.css" />
